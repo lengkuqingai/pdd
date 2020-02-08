@@ -27,7 +27,9 @@
     },
     mounted(){
       let index = this.$route.query.index
-      this.content = this.list[index]
+      this.list.forEach(item=>{
+        item.index==index && (this.content = item)
+      })
     },
     methods:{
       goList(index){

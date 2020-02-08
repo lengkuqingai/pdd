@@ -12,7 +12,7 @@
       <div class="clip list">
         <div class="title-item">您关注的最新资讯</div>
         <div class="list-wrap">
-          <div v-for="(item,index) in list" :key="index" class="list-item" :class="index<3?'hot':''" @click="goList(index)">{{item.title}}</div>
+          <div v-for="(item,index) in list" :key="index" class="list-item" :class="index<3?'hot':''" @click="goList(item.index)">{{item.title}}</div>
         </div>
       </div>
     </div>
