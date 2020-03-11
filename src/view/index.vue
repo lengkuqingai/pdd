@@ -18,7 +18,7 @@
     </div>
     <footer class="id">
       <p>&#169;2019-2020</p>
-      <p>(网站备案：粤ICP备19129443号)</p>
+      <a href="http://www.beian.miit.gov.cn">(网站备案：粤ICP备19129443号)</a>
     </footer>
   </div>
 </template>

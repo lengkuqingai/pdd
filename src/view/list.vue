@@ -2,12 +2,22 @@
   <div class="wrap">
     <Headers :title="content.title"></Headers>
     <div class="content">
-      <div class="content-item" v-for="(item,index) in content.content" :key="index">{{item}}</div>
+      <div class="content-item" v-for="(item,index) in content.content" :key="index">
+        <div v-if="item.startsWith('src:')" class="img">
+          <img :src="item.match(/src:(\S*)/)[1]" />
+        </div>
+        <div v-else-if="item.startsWith('video:')" class="video">
+          <video autoplay loop :src="item.match(/video:(\S*)/)[1]"></video>
+        </div>
+        <div v-else>
+          {{item}}
+        </div>
+      </div>
       <div v-if="content.tip" class="tip" @click="leave(content.alt)" :herf="content.alt">{{content.tip}}</div>
     </div>
     <footer class="id">
       <p>&#169;2019-2020</p>
-      <p>(网站备案：粤ICP备19129443号)</p>
+      <a href="http://www.beian.miit.gov.cn">(网站备案：粤ICP备19129443号)</a>
     </footer>
   </div>
 </template>
@@ -77,5 +87,19 @@
     text-align: center;
     margin-top:10px;
     text-decoration:underline;
+  }
+  img{
+    display: block;
+    max-width:100%;
+    margin: 0 auto;
+  }
+  .video{
+    /*display: flex;*/
+  }
+  .video video{
+    max-width: 100%;
+    height:auto;
+    margin:0 auto;
+    float: left;
   }
 </style>
