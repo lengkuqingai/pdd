@@ -3,10 +3,10 @@
     <Headers :left="left" :title="'拼多多砍价群'"></Headers>
     <div class="content">
       <div class="clip">
-        <div class="title-item">如何获取拼多多砍价群</div>
-        <div class="desc">关注公众号<span>只为钱</span>或扫描下方二维码，回复<span>拼多多互砍群</span></div>
+        <div class="title-item">拼多多互助平台</div>
+        <!-- <div class="desc">关注公众号<span>只为钱</span>或扫描下方二维码，回复<span>拼多多互砍群</span></div> -->
         <div class="code">
-          <img src="../assets/zwp.jpg">
+          <img src="../assets/hz.jpg">
         </div>
       </div>
       <div class="clip list">
